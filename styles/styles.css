@@ -32,9 +32,9 @@ nav {
 }
 
 nav a {
-  color: blanchedalmond;
+  color: rgb(51, 31, 1);
   display: block;
-  padding: 0;
+  padding: 0%;
 }
 
 img {
