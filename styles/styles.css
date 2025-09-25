@@ -22,8 +22,8 @@ main img {
   width: 100px;
   height: auto;
   border: #222;
-  padding: auto;
-  box-shadow: #ccc;
+  padding: 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -34,7 +34,7 @@ nav {
 nav a {
   color: blanchedalmond;
   display: block;
-  padding: auto;
+  padding: 0;
 }
 
 img {
