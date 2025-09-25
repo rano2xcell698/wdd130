@@ -14,26 +14,27 @@ main {
 }
 
 h1 {
-  margin: 10px;
-  text-align: center;
+  color: bisque;
 }
 
-h2 {
-    border-bottom: 1px solid #222;
-}
 
 main img {
   width: 100px;
   height: auto;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 1rem;
+  border: #222;
+  padding: auto;
+  box-shadow: #ccc;
 }
 
 nav {
     background-color: antiquewhite;
-    padding: block;
-    align-self: auto;
+    padding: 0;
+}
+
+nav a {
+  color: blanchedalmond;
+  display: block;
+  padding: auto;
 }
 
 img {
@@ -43,6 +44,7 @@ img {
   display: block;
   margin: 1rem;
 }
+
 
 
 ul {
@@ -65,10 +67,8 @@ aside {
 }
 
 aside img {
-  width: 100px;
+  width: 200px;
   height: auto;
-  border-radius: 6px;
-  margin: 10px 0;
 }
 
 footer {
