@@ -1,18 +1,13 @@
-/* Rafting Site Stylesheet */
-/* ======================== */
-
-/* CSS Variables */
 :root {
-  --primary-color: #055a05;    /* forest green */
-  --secondary-color: #f4a261;  /* warm sand */
-  --accent1-color: #264653;    /* dark slate blue */
-  --accent2-color: #e0c98fff;    /* light golden yellow */
-
+  --primary-color: #055a05;      /* dark green */
+  --secondary-color: #f4a261;    /* warm sand */
+  --accent1-color: #264653;      /* slate */
+  --accent2-color: #e9c46a;      /* golden yellow */
   --heading-font: "Times New Roman", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset and Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,97 +21,153 @@ body {
   line-height: 1.6;
 }
 
-header, main, footer {
-  width: 840px;
+header,
+main,
+footer {
+  max-width: 960px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Headings */
-h1, h2 {
+/* ---------- Header ---------- */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr; /* logo left, nav right */
+  align-items: center;
+  background: var(--primary-color);
+  padding: 1rem;
+}
+
+header .logo { justify-self: start; }
+header nav { justify-self: end; }
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+header nav a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover { text-decoration: underline; }
+
+/* ---------- Intro / Hero ---------- */
+.hero {
+  background: #fff;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.hero h1 {
+  text-align: center;
   font-family: var(--heading-font);
   color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-grid p { text-align: center; }
+.hero-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------- History Section ---------- */
+.history {
+  background: #f5f5f5;
+  padding: 2rem 1rem;
+  border-radius: 6px;
+  margin: 2rem auto;
+}
+
+.history h2 {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.history-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------- Adventures Gallery ---------- */
+.adventures {
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+}
+
+.adventures h2 {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .adventure-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .adventure-gallery { grid-template-columns: 1fr; }
+}
+
+.adventure-gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 0.5rem;
+  color: var(--accent1-color);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--primary-color);
+  color: var(--accent2-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0 0 6px 6px;
+}
+
+footer p { margin: 0; }
+
+footer .socialmedia {
   display: flex;
   gap: 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--secondary-color);
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 12px;
-  border-radius: 8px;
-  max-width: 60%;
-}
-
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 12px;
-  border-radius: 8px;
-}
-
-/* Sections */
-section {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 16px;
-  margin-top: 20px;
-  border-top: 2px solid var(--secondary-color);
-}
-
-footer p {
-  margin-bottom: 10px;
-}
-
-.socialmedia a {
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.socialmedia img {
-  width: 30px;
-  height: 30px;
+footer .socialmedia img {
+  width: 24px;
+  height: 24px;
 }
