@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,20 +15,22 @@ main {
 }
 
 h1 {
-  color: bisque;
+  color: #0c0c0c;
+  text-align: center;
 }
 
 
 main img {
-  width: 100px;
+  width: 300px;
   height: auto;
   border: #222;
   padding: 0;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  float: right;
 }
 
 nav {
-    background-color: antiquewhite;
+    background-color: rgb(3, 113, 215);
     padding: 0;
 }
 
@@ -43,6 +46,8 @@ img {
   border-radius: 8px;
   display: block;
   margin: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  align-content: center;
 }
 
 
@@ -77,4 +82,13 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 0.9rem;
+}
+
+/* class selector */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 1rem;
+  background-color: #eee;
+  color: black;
 }
