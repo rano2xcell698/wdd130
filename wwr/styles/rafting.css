@@ -1,173 +1,156 @@
+
+/* --------------------------------------------------------- */
+/* FILE: wwr/styles/rafting.css */
+/* Save this as: wwr/styles/rafting.css */
+/* --------------------------------------------------------- */
 :root {
-  --primary-color: #055a05;      /* dark green */
-  --secondary-color: #f4a261;    /* warm sand */
-  --accent1-color: #264653;      /* slate */
-  --accent2-color: #e9c46a;      /* golden yellow */
-  --heading-font: "Times New Roman", Georgia, serif;
-  --body-font: Arial, Helvetica, sans-serif;
+/* color palette — feel free to change */
+--primary-color: #055a05; /* forest green */
+--secondary-color: #f4a261; /* warm sand */
+--accent1-color: #264653; /* dark slate */
+--accent2-color: #e9c46a; /* light golden yellow */
+
+--heading-font: "Georgia", "Times New Roman", serif;
+--body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset */
+/* Reset box model */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
-  background-color: #fff;
-  line-height: 1.6;
+font-family: var(--body-font);
+color: var(--accent1-color);
+background-color: #ffffff;
+line-height: 1.5;
 }
 
-header,
-main,
-footer {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* Page width and centering for desktop as requested */
+header, main, footer {
+width: 840px;
+margin: 0 auto;
 }
 
-/* ---------- Header ---------- */
+/* Header styling */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr; /* logo left, nav right */
-  align-items: center;
-  background: var(--primary-color);
-  padding: 1rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--primary-color);
+color: var(--accent2-color);
+padding: 12px 16px;
 }
 
-header .logo { justify-self: start; }
-header nav { justify-self: end; }
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
+header .logo img {
+display: block;
+max-height: 60px;
 }
 
-header nav a {
-  color: var(--accent2-color);
-  text-decoration: none;
-  font-weight: bold;
+/* Navigation */
+nav ul {
+list-style: none;
+display: flex;
+gap: 12px;
 }
 
-header nav a:hover { text-decoration: underline; }
+nav a {
+color: var(--accent2-color);
+text-decoration: none;
+font-weight: 600;
+}
 
-/* ---------- Intro / Hero ---------- */
+/* Basic spacing for main content */
+nav, p, section, article {
+margin: 16px;
+padding: 8px;
+}
+
+h1, h2 {
+font-family: var(--heading-font);
+color: var(--primary-color);
+}
+
+/* Hero block and overlays */
 .hero {
-  background: #fff;
-  padding: 2rem 1rem;
-  margin: 2rem auto;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+position: relative;
+margin: 16px;
+}
+
+.hero img {
+display: block;
+width: 100%;
+height: auto;
 }
 
 .hero h1 {
-  text-align: center;
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+position: absolute;
+top: 20px;
+width: 100%;
+padding: 16px;
+text-align: center;
+opacity: 0.85;
+background-color: var(--accent1-color);
+color: #fff;
+font-size: 2rem;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  gap: 1rem;
-  align-items: center;
+/* Article overlay inside hero */
+.hero article {
+position: absolute;
+bottom: 20px;
+left: 20px;
+width: calc(50% - 40px);
+background: rgba(255,255,255,0.95);
+padding: 12px;
+border-radius: 8px;
 }
 
-.hero-grid p { text-align: center; }
-.hero-grid img {
-  width: 100%;
-  border-radius: 6px;
+.hero article img {
+float: right;
+width: 125px;
+margin-left: 12px;
+border-radius: 6px;
 }
 
-/* ---------- History Section ---------- */
-.history {
-  background: #f5f5f5;
-  padding: 2rem 1rem;
-  border-radius: 6px;
-  margin: 2rem auto;
+/* Remove underline from social media image links */
+.socialmedia a {
+text-decoration: none;
+margin-right: 8px;
 }
 
-.history h2 {
-  text-align: center;
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
+.socialmedia img {
+width: 28px;
+height: 28px;
+display: inline-block;
+vertical-align: middle;
 }
 
-.history-grid {
-  display: grid;
-  grid-template-columns: 1fr 200px 1fr;
-  gap: 1rem;
-  align-items: center;
+/* Responsive adjustments */
+@media (max-width: 880px) {
+header, main, footer {
+width: 100%;
+padding: 0 12px;
 }
 
-.history-grid img {
-  width: 100%;
-  border-radius: 6px;
+.hero article {
+position: static;
+width: auto;
+margin-top: -60px; /* pulls the article up slightly over the image */
+background: rgba(255,255,255,0.98);
+float: none;
 }
 
-/* ---------- Adventures Gallery ---------- */
-.adventures {
-  padding: 2rem 1rem;
-  margin: 2rem auto;
+.hero h1 {
+font-size: 1.6rem;
+top: 10px;
+}
 }
 
-.adventures h2 {
-  text-align: center;
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.adventure-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  text-align: center;
-}
-
-@media (max-width: 800px) {
-  .adventure-gallery { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .adventure-gallery { grid-template-columns: 1fr; }
-}
-
-.adventure-gallery img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.adventure-gallery figcaption {
-  margin-top: 0.5rem;
-  color: var(--accent1-color);
-}
-
-/* ---------- Footer ---------- */
-footer {
-  background: var(--primary-color);
-  color: var(--accent2-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  border-radius: 0 0 6px 6px;
-}
-
-footer p { margin: 0; }
-
-footer .socialmedia {
-  display: flex;
-  gap: 1rem;
-}
-
-footer .socialmedia img {
-  width: 24px;
-  height: 24px;
+/* Small utility tweaks */
+a:focus {
+outline: 3px solid var(--secondary-color);
+outline-offset: 2px;
 }
