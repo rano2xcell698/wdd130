@@ -9,6 +9,7 @@
     <meta name="description"
         content="River Rush Rafting — thrilling white water rafting adventures and guided river trips for all skill levels.">
     <meta name="author" content="Chukwunwike Williams Okonkwo">
+    <meta name="keywords" content="rafting, white water, adventure, outdoor, family trips">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -19,7 +20,7 @@
         </a>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -39,15 +40,31 @@
             </article>
         </div>
 
-        <section>
-            <h2>Why Choose Us?</h2>
-            <p>Top-rated guides, premium equipment, and scenic rivers make River Rush your best choice for adventure.
-            </p>
+        <section class="home-grid">
+            <div>
+                <h2>Why Choose Us?</h2>
+                <p>Top-rated guides, premium equipment, and scenic rivers make River Rush your best choice for
+                    adventure.</p>
+            </div>
+            <div>
+                <h2>Book Your Trip</h2>
+                <p>Check our Trips page for packages that match your skill level and budget.</p>
+                <a href="trips.html" class="button">View Trips</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Book Your Trip</h2>
-            <p>Check our Trips page for packages that match your skill level and budget.</p>
+        <section class="newsletter">
+            <h2>Join Our Adventure Newsletter</h2>
+            <p>Stay updated with trip discounts, safety tips, and adventure stories!</p>
+            <form>
+                <label for="newsletter-name">Name:</label>
+                <input type="text" id="newsletter-name" name="name" required>
+
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="email" required>
+
+                <button type="submit">Sign Me Up!</button>
+            </form>
         </section>
     </main>
 
