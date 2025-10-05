@@ -9,63 +9,84 @@
     <meta name="description"
         content="River Rush Rafting — guided white water adventures for families and thrill-seekers. Learn about our history, mission, and team.">
     <meta name="author" content="Chukwunwike Williams Okonkwo">
-    <!-- Link to the site CSS (place this file at wwr/styles/rafting.css) -->
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <a href="index.html" class="logo" aria-label="River Rush homepage">
-            <!-- Put a small optimized SVG or PNG at wwr/images/rr-logo.svg (<=100KB) -->
-            <img src="images/rafting-logo.jpg" alt="River Rush Rafting logo">
-        </a>
+        <div class="header-grid">
+            <a href="index.html" class="logo" aria-label="River Rush homepage">
+                <img src="images/rafting-logo.jpg" alt="River Rush Rafting logo">
+            </a>
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav-flex">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <div class="hero">
-            <!-- Hero image that fills the hero area. Place optimized file at wwr/images/hero.jpg (<=100KB) -->
+        <!-- HERO SECTION -->
+        <section class="hero">
             <img src="images/adiron-deck-park.jpg" alt="Kayakers navigating white water rapids">
-
-            <!-- Heading over the hero image -->
             <h1>River Rush Rafting</h1>
 
-            <article>
-                <!-- Small client/guide photo (optimized <=100KB) -->
+            <article class="hero-article">
                 <img src="images/victoria-fall-africa.webp" alt="Smiling rafting guide">
                 <p>
                     River Rush delivers safe, sustainable, and thrilling river adventures for families and
-                    thrill-seekers. Our certified guides, modern equipment, and deep respect for the river ensure an
-                    unforgettable trip every time.
+                    thrill-seekers.
+                    Our certified guides, modern equipment, and deep respect for the river ensure an unforgettable trip
+                    every time.
                 </p>
             </article>
-        </div>
+        </section>
 
-        <section>
-            <h2>History</h2>
+        <!-- HISTORY SECTION -->
+        <section class="history">
+            <h2>Our History</h2>
             <p>
-                Founded in 1998, River Rush started as a small guided-trip company run by local river experts. Over the
-                years we've grown while keeping safety and customer experience as our highest priorities.
+                Founded in 1998, River Rush started as a small guided-trip company run by local river experts.
+                Over the years we've grown while keeping safety and customer experience as our highest priorities.
+                Today, we offer world-class rafting adventures across multiple destinations.
             </p>
         </section>
 
-        <section>
+        <!-- ADVENTURES SECTION -->
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
-            <!-- Content for this section will be added in the next assignment (images, trip highlights, etc.) -->
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/adventure-1.jpg" alt="Los Dientes del Diablo Rapids">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure-2.jpg" alt="Big Mallard Rapids">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure-3.jpg" alt="Half Day Adventure trip">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure-4.jpg" alt="Grand Falls Rapids">
+                    <figcaption>Grand Falls</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure-5.jpg" alt="Night Rafting Experience">
+                    <figcaption>Night Rafting</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 River Rush Rafting — Chukwunwike Williams Okonkwo</p>
-
         <nav class="socialmedia" aria-label="Social media links">
             <a href="https://facebook.com" aria-label="Facebook">
                 <img src="images/facebook-logo.png" alt="Facebook icon">
