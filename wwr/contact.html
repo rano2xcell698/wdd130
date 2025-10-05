@@ -7,50 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>River Rush Rafting — Contact Us</title>
     <meta name="description"
-        content="Get in touch with River Rush Rafting for bookings, questions, or custom adventure requests.">
-    <meta name="author" content="Chukwunwike Williams Okonkwo">
+        content="Contact River Rush Rafting for inquiries, reservations, and adventure questions. Get in touch with our friendly team today!">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <a href="index.html" class="logo">
+        <div class="logo">
             <img src="images/rafting-logo.jpg" alt="River Rush Rafting logo">
-        </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/adiron-deck-park.jpg" alt="Rafting guides ready for adventure">
-            <h1>Contact River Rush Rafting</h1>
-        </div>
-
-        <section>
-            <h2>We'd love to hear from you!</h2>
-            <p>Email: info@riverrush.com<br>
-                Phone: +234-800-RAFTING<br>
-                Office: 123 Adventure Rd, Sunshine Valley</p>
+        <section class="contact-intro">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have questions about our trips, safety policies, or would like to
+                make a reservation, our team is here to help.</p>
         </section>
 
-        <section>
+        <!-- Company Information -->
+        <section class="company-info">
+            <h2>Our Office</h2>
+            <p><strong>Address:</strong> 123 Rapids Way, Riverbend City, CO 80901</p>
+            <p><strong>Phone:</strong> +1 (970) 555-0182</p>
+            <p><strong>Email:</strong> info@riverrushrafting.com</p>
+
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.3018863742434!2d-105.27896792422555!3d39.73915327944995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b873b9e3c8b45%3A0x8d3f0414e72b9e8b!2sColorado!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <figure>
+                    <img src="images/guide-1.jpeg" width="100" alt="Adventure Guide — Emma">
+                    <figcaption>Emma Stone — Lead Adventure Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/guide-2.jpeg" width="100" alt="Safety Coordinator — Liam">
+                    <figcaption>Liam Brooks — Safety Coordinator</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/guide-3.jpeg" width="100" alt="Customer Support — Ava">
+                    <figcaption>Ava Johnson — Customer Support</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+            <form action="thankyou.html" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <p>What is the purpose of your message?</p>
+                <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+                <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+                <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+                </label>
 
                 <button type="submit">Send Message</button>
             </form>
@@ -58,12 +94,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 River Rush Rafting — Chukwunwike Williams Okonkwo</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook-logo.png" alt="Facebook"></a>
-            <a href="https://linkedin.com"><img src="images/linkedin-logo.png" alt="LinkedIn"></a>
-            <a href="https://instagram.com"><img src="images/instagram-logo.jpg" alt="Instagram"></a>
-        </nav>
+        <p>©2025 River Rush Rafting | Designed by Williams Okonkwo</p>
+        <div class="socialmedia">
+            <a href="#"><img src="images/facebook-logo.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-logo.webp" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-logo.jpg" alt="Instagram"></a>
+        </div>
     </footer>
 </body>
 
